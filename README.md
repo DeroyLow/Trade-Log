@@ -43,3 +43,9 @@ python refresh_data.py
 ```
 
 Then redeploy or push the updated `data/trades.json`.
+
+For a one-command update from the project folder, run:
+
+```powershell
+.\update-data.ps1
+```
