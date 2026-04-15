@@ -35,7 +35,7 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   padding: 30px;
   border: 1px solid var(--line);
@@ -75,36 +75,11 @@ h2 {
   line-height: 1.6;
 }
 
-.hero-meta {
-  display: grid;
-  gap: 16px;
-  align-content: start;
-}
-
-.meta-card,
 .panel {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--panel);
   backdrop-filter: blur(14px);
-}
-
-.meta-card {
-  padding: 18px 20px;
-}
-
-.meta-card strong {
-  display: block;
-  margin-top: 6px;
-  font-size: 1rem;
-  word-break: break-word;
-}
-
-.meta-label {
-  color: var(--muted);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 .content-grid {

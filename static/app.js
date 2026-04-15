@@ -1,6 +1,4 @@
 const summaryCards = document.getElementById("summary-cards");
-const workbookPath = document.getElementById("workbook-path");
-const generatedAt = document.getElementById("generated-at");
 const chart = document.getElementById("month-chart");
 const tooltip = document.getElementById("chart-tooltip");
 const tradeRows = document.getElementById("trade-rows");
@@ -184,8 +182,6 @@ function renderTrades(payload) {
 async function fetchSummary() {
   const response = await fetch("/api/summary");
   const payload = await response.json();
-  workbookPath.textContent = payload.workbook_path;
-  generatedAt.textContent = new Date(payload.generated_at).toLocaleString();
   renderSummary(payload.summary);
   fillSelect(monthFilter, payload.filters.months, formatMonth);
   fillSelect(setupFilter, payload.filters.setups);
