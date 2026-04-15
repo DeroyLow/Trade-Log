@@ -63,6 +63,7 @@ function renderSummary(summary) {
     statCard("Win Rate", formatPercent(summary.win_rate)),
     statCard("Average Win", formatCurrency(summary.average_win), "positive"),
     statCard("Average Loss", formatCurrency(summary.average_loss), "negative"),
+    statCard("Profit Factor", (summary.profit_factor || 0).toFixed(2)),
     statCard("Best Trade", formatCurrency(summary.best_trade), "positive"),
     statCard("Worst Trade", formatCurrency(summary.worst_trade), "negative"),
     statCard("Median Hold", `${summary.median_holding_days.toFixed(1)} days`),

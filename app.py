@@ -257,6 +257,9 @@ def compute_summary(trades: list[dict[str, Any]]) -> dict[str, Any]:
         "portfolio_return": sum(return_values),
         "average_win": (sum(wins) / len(wins)) if wins else 0.0,
         "average_loss": (sum(losses) / len(losses)) if losses else 0.0,
+        "profit_factor": ((sum(wins) / len(wins)) / abs(sum(losses) / len(losses)))
+        if wins and losses
+        else 0.0,
         "best_trade": max(net_values) if net_values else 0.0,
         "worst_trade": min(net_values) if net_values else 0.0,
         "median_holding_days": median(holding_days),
